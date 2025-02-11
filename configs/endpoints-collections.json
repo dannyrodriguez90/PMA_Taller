@@ -176,6 +176,25 @@
 						"url": "http://127.0.0.1:3001/adoptionSystem/v1/user/updateUser/679bb5d6ee63f68e61116b93"
 					},
 					"response": []
+				},
+				{
+					"name": "Actualizar foto de usuario",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "path/to/new/profile/picture.jpg"
+								}
+							]
+						},
+						"url": "http://localhost:3001/adoptionSystem/v1/user/updateProfilePicture/60d21b4667d0d8992e610c86"
+					},
+					"response": []
 				}
 			]
 		},
@@ -246,7 +265,43 @@
 								}
 							}
 						},
-						"url": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/createAppointment"
+						"url": "http://localhost:3001/adoptionSystem/v1/appointment/createAppointment"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar citas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/adoptionSystem/v1/appointment/"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cita",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"date\": \"2023-10-16T10:00:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/adoptionSystem/v1/appointment/updateAppointment/60d21b4667d0d8992e610c87"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cita",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3001/adoptionSystem/v1/appointment/deleteAppointment/60d21b4667d0d8992e610c87"
 					},
 					"response": []
 				}
